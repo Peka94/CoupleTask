@@ -19,7 +19,8 @@ public class Reader {
     public static ArrayList<Person> persons = new ArrayList<>();
 
     public static ArrayList<Person> read() throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("us-500.csv"));
+        Scanner sc;
+        sc = new Scanner(new File("us-500.csv"));
         sc.nextLine();
         while (sc.hasNext()) {
             String line = sc.nextLine();

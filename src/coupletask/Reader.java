@@ -27,6 +27,7 @@ public class Reader {
             String[] parts = line.split(",");
             StringBuilder sb = new StringBuilder();
             sb.append(parts[0]);
+            sb.append(" ");
             sb.append(parts[1]);
             String name = sb.toString();
 

@@ -1,5 +1,6 @@
 package coupletask;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -12,13 +13,14 @@ public class CoupleTask {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) throws FileNotFoundException {
+        sortPersons();
         
     }
     
-    public static void sortPersons (){
+    public static void sortPersons () throws FileNotFoundException{
         ArrayList<Person> persons = Reader.read();
-        persons.getName(new NameComparator());
+        persons.sort(new NameComparator());
+        
     }
 }
